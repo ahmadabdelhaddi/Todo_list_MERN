@@ -1,0 +1,16 @@
+/* google font */
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap"); */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto&display=swap"); */
+/* layout */
+:root {
+  --primary: #2c2c38;
+  --secondery: #7a8091;
+  --white: white;
+  --black: black;
+}
+body {
+  background: #f1f1f1;
+  margin: 0;
+  font-family:sans-serif 
+}

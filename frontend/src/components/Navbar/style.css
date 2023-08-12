@@ -1,0 +1,48 @@
+.container-Header {
+  width: 81vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+header {
+  display: flex;
+  height: 100px;
+  background-color: var(--primary);
+  color: white !important;
+  padding: 10px;
+}
+
+.body-button-addTask {
+  background-color: #645fc4;
+  padding: 10px 35px;
+  color: white;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.body-button-addTask:hover {
+  background-color: #3d3798;
+  transition: 0.3s;
+}
+
+input,select{
+  width: 350px;
+  height: 35px;
+  border: 1px solid #3c3c48;
+  border-radius: 6px;
+  margin-top: 6px;
+  padding: 10px;
+}
+.description input{
+  height: 100px;
+}
+.status input {
+  color: white !important;
+}
+.closeBtn{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
