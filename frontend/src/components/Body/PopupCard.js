@@ -91,7 +91,7 @@ function PopupCard({ handleClose, workout }) {
                 X
               </Link>
             </div>
-            
+
             <DialogTitle
               className="DialogTitle"
               style={{
@@ -125,7 +125,7 @@ function PopupCard({ handleClose, workout }) {
                 className="subtasks"
                 style={{ marginTop: "20px" }}
               >
-                <bold>Subtasks (0 of {subtasks})</bold>
+                <span>Subtasks (0 of {subtasks})</span>
               </label>
 
               {/* Status of task */}

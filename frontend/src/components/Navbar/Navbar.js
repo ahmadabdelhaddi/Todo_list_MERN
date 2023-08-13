@@ -3,7 +3,6 @@ import "./style.css";
 import PopupForm from "./PopupForm";
 
 const Navbar = () => {
-  
   const [popupVisible, setPopupVisible] = useState(false);
   const openForm = () => {
     setPopupVisible(true);
@@ -28,7 +27,7 @@ const Navbar = () => {
           </div>
         </div>
       </header>
-      {popupVisible && <PopupForm handleClose={closeForm} />} {/* Pass the closeForm function */}
+      {popupVisible && <PopupForm handleClose={closeForm} />}
     </>
   );
 };

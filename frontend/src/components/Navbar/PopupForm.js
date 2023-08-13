@@ -5,21 +5,17 @@ import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function PopupForm({ handleClose }) {
   const [open, setOpen] = useState(false);
   const [title, setTitle] = useState("");
+
   const [description, setDescription] = useState("");
   const [status, setStatus] = useState("");
   const [progress_bar, setProgressBar] = useState("");
   const [subtasks, setSubtasks] = useState("");
   const [error, seterror] = useState(null);
-
-  const handleChangeTitle = (e) => {
-    setTitle(e.target.value);
-    console.log(title);
-  };
 
   const handleChangeDescription = (e) => {
     setDescription(e.target.value);
@@ -36,11 +32,6 @@ export default function PopupForm({ handleClose }) {
   const handleChangeSubtasks = (e) => {
     setSubtasks(e.target.value);
   };
-
-  // const handleChange = (e) => {
-  //   setTask({ ...task, [e.target.name]: e.target.value });
-  //   console.log(task);
-  // };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -132,13 +123,11 @@ export default function PopupForm({ handleClose }) {
               Title
               <input
                 id="title"
-                value={title}
                 name="title"
                 type="text"
-                onChange={handleChangeTitle}
-                // (e) => {
-                //   setTitle(e.target.value);
-                // }
+                onChange={(e) => {
+                  setTitle(e.target.value);
+                }}
                 required
               />
             </label>
@@ -216,8 +205,6 @@ export default function PopupForm({ handleClose }) {
               value="Create Task"
               open={false}
             />
-
-            {error && <div className="formError">{error}</div>}
           </form>
 
           <DialogContentText></DialogContentText>

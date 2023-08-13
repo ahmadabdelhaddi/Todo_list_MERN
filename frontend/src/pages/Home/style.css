@@ -10,7 +10,6 @@
   overflow: auto;
 }
 
-
 .sidebar {
   width: 280px;
   height: 100vh;
@@ -75,4 +74,3 @@
   gap: 10px;
   cursor: pointer;
 }
-
