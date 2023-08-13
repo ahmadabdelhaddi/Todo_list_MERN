@@ -99,7 +99,15 @@ function Sidebar() {
                 onClick={toggleTheme}
               />
             ) : (
-              "Theme is Light"
+              <img
+                id="sunTheme"
+                alt=""
+                style={{ cursor: "pointer" }}
+                src={
+                  isLightTheme ? "./icons8-sun.png" : "./icons8-moon-24.png "
+                }
+                onClick={toggleTheme}
+              />
             )}
           </div>
           <p className="side-eye" onClick={toggleSide}>
