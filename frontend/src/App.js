@@ -1,19 +1,17 @@
 import "./App.css";
 // import to route and install
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Navbar from "./components/Navbar/Navbar";
-import Sidebar from "./components/Sidebar/Sidebar";
-import Sidebara from "./components/Sidebar/Sidebar";
-
+import HomeTasks from "./pages/Home/HomeTasks";
+import Chart from "./pages/ChartPage/Chart";
 function App() {
   return (
     <>
       <div className="App">
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Sidebar />} />
-            <Route path="/aa" element={<Sidebara />} />
+            <Route path="/tasks" element={<HomeTasks />} />
+            <Route path="/:id" element={<HomeTasks />} />
+            <Route path="/chart" element={<Chart />} />
           </Routes>
         </BrowserRouter>
       </div>

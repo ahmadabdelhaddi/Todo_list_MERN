@@ -17,9 +17,7 @@
 }
 .card {
   font-size: 9px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+
   padding: 10px;
   flex-direction: column;
   background-color: #2c2c38;
@@ -42,3 +40,8 @@
   justify-content: center;
   align-items: center;
 }
+
+.closeBtn {
+  text-decoration: none !important;
+}
+

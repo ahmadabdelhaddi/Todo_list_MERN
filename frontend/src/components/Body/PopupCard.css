@@ -1,0 +1,104 @@
+.closeBtn button {
+  padding: 8px !important;
+  height: 10px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #645fc4;
+  padding: 5px 10px; /* Note: Duplicate padding removed */
+  color: white;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+}
+.cardPopupInfo {
+  color: white;
+  background-color: #2c2c38;
+}
+.cardPopupInfo input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  width: 390px;
+}
+
+#dialog {
+  background-color: #2c2c38;
+}
+
+input,
+select {
+  width: 350px;
+  height: 35px;
+  border: 1px solid #3c3c48;
+  border-radius: 6px;
+  margin-top: 6px;
+  padding: 10px;
+}
+.description input {
+  height: 100px;
+}
+.status input {
+  color: white !important;
+}
+.closeBtn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-decoration: none;
+}
+
+/* style.css */
+
+.linkStyle {
+    padding: 8px !important;
+    height: 10px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #645fc4;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .section-Dialog {
+    /* Your styles for section */
+  }
+  
+  .popup-button-close {
+    /* Your styles for the close button */
+  }
+  
+  .CardTitle {
+    color: white;
+    padding: 0;
+  }
+  
+  .cardPopupInfo {
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title,
+  .description,
+  .subtasks,
+  .status {
+    margin-top: 10px;
+  }
+  
+  .status select {
+    /* Your styles for the select element */
+  }
+  
+  .body-button-addTask {
+    /* Your styles for the submit button */
+  }
+  
+  .formError {
+    /* Your styles for error messages */
+  }
+  

@@ -17,13 +17,6 @@ const workoutRoutes = require("./routes/workouts");
 // import Mongoose
 const mongoose = require("mongoose");
 
-// middlewear
-// express.json() is a built in middleware function in Express, It parses incoming JSON requests and puts the parsed data in req.body.
-
-// app.use((req, res, next) => {
-//   console.log(req.path, req.method);
-//   next();
-// });
 
 // routes
 app.use("/api/workouts", workoutRoutes);

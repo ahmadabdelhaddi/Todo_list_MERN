@@ -3,8 +3,8 @@ import "./style.css";
 import PopupForm from "./PopupForm";
 
 const Navbar = () => {
+  
   const [popupVisible, setPopupVisible] = useState(false);
-
   const openForm = () => {
     setPopupVisible(true);
   };
@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <>
       <header>
-        <div className="container-Header" id="blur">
+        <div className="container-Header">
           <div>
             <h1>Platform Launch</h1>
           </div>

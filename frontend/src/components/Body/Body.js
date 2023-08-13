@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
 import Card from "./Card";
+import PopupCard from "./PopupCard";
 const Body = () => {
   const [NewColumn, setNewColumn] = useState("false");
   const [workouts, setWorkouts] = useState([]);
+  const [workout, setWorkout] = useState([]);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const fetchWorkouts = async () => {
@@ -16,8 +20,14 @@ const Body = () => {
     };
 
     fetchWorkouts();
+
+    // fetchSingleCard();
   }, [workouts]);
 
+  const linkStyle = {
+    color: "inherit", // Inherit color from parent
+    textDecoration: "none", // Remove underline
+  };
   const convertToggle = () => {
     setNewColumn(!NewColumn);
   };
@@ -49,6 +59,10 @@ const Body = () => {
     (workout) => workout.status === "done"
   ).length;
 
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
   return (
     <div className="container-cards">
       <div className="list">
@@ -61,11 +75,13 @@ const Body = () => {
             ? workouts
                 .filter((workout) => workout.status === "todo")
                 .map((workout) => (
-                  <Card
-                    key={workout._id}
-                    workout={workout}
-                    onDelete={handleDelete}
-                  />
+                  <Link style={linkStyle} to={`/${workout._id}`}>
+                    <Card
+                      key={workout._id}
+                      workout={workout}
+                      onDelete={handleDelete}
+                    />
+                  </Link>
                 ))
             : null}
         </div>
@@ -81,11 +97,15 @@ const Body = () => {
             ? workouts
                 .filter((workout) => workout.status === "doing")
                 .map((workout) => (
-                  <Card
-                    key={workout._id}
-                    workout={workout}
-                    onDelete={handleDelete}
-                  />
+                  <div onClick={handleClickOpen}>
+                    <Link style={linkStyle} to={`/${workout._id}`}>
+                      <Card
+                        key={workout._id}
+                        workout={workout}
+                        onDelete={handleDelete}
+                      />
+                    </Link>
+                  </div>
                 ))
             : null}
         </div>
@@ -101,11 +121,13 @@ const Body = () => {
             ? workouts
                 .filter((workout) => workout.status === "done")
                 .map((workout) => (
-                  <Card
-                    key={workout._id}
-                    workout={workout}
-                    onDelete={handleDelete}
-                  />
+                  <Link style={linkStyle} to={`/${workout._id}`}>
+                    <Card
+                      key={workout._id}
+                      workout={workout}
+                      onDelete={handleDelete}
+                    />
+                  </Link>
                 ))
             : null}
         </div>
